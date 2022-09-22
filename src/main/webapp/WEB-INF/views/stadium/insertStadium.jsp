@@ -17,4 +17,6 @@
 	</form>
 </div>
 
+<script src="/js/stadium.js"></script>
+
 <%@ include file="../layout/footer.jsp"%>

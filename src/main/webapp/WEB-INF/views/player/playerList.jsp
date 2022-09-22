@@ -27,12 +27,14 @@
 					<td>${player.playerName}</td>
 					<td>${player.position}</td>
 					<td>${player.playerTeam}</td>
-					<td><input type="checkbox" name="delete" value="true"></td>
+					<td><input id="deleteCheck" type="checkbox" name="delete" value="true"></td>
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
 
 </div>
+
+<script src="/js/player.js"></script>
 
 <%@ include file="../layout/footer.jsp"%>

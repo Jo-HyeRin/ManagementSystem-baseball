@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="site.metacoding.baseballManagement.domain.banplayer.BanPlayerDao">
+
+	<insert id="insert">
+		INSERT INTO banPlayer(playerName, banReason, banDate)
+		VALUES(#{playerName}, #{banReason}, NOW())
+	</insert>
+
+	<select id="findAll"
+		resultType="site.metacoding.baseballManagement.domain.banplayer.BanPlayer">
+		SELECT *
+		FROM BanPlayer	
+	</select>
+
+	<insert id="deleteById">
+		DELETE FROM banPlayer WHERE id = #{id}
+	</insert>
+
+</mapper>

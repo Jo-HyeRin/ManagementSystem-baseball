@@ -32,6 +32,9 @@
 							<li class="nav-item"><a class="nav-link" href="/teamSaveForm">팀등록</a></li>
 							<li class="nav-item"><a class="nav-link" href="/playerList">선수목록&삭제</a></li>
 							<li class="nav-item"><a class="nav-link" href="/playerSaveForm">선수등록</a></li>	
+							<li class="nav-item"><a class="nav-link" href="/listByPosition">포지션별팀의선수</a></li>
+							<li class="nav-item"><a class="nav-link" href="/banPlayerList">퇴출선수목록</a></li>
+							<li class="nav-item"><a class="nav-link" href="/banPlayerSaveForm">퇴출선수등록</a></li>
 				</ul>
 			</div>			
 		</div>

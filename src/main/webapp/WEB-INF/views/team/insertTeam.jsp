@@ -7,10 +7,10 @@
 	<h1 style="text-align: center;">팀등록</h1>	
 	<br />
 
-	<label for="team">Choose a team:</label> 
-	<select id="team" name="team">
-		<c:forEach var="teamName" items="${teamList}">
-			<option value="${team.teamName}">${team.teamName}</option>
+	<label for="team">Choose a stadium:</label> 
+	<select id="stadium" name="stadium">
+		<c:forEach var="stadium" items="${stadiumList}">
+			<option value="${stadiumName}">${stadium.stadiumName}</option>
 		</c:forEach>
 	</select>	
 	
@@ -29,5 +29,7 @@
 	</div>
 	<button id="btnInsert" type="button" class="btn btn-primary">팀등록하기</button>
 </div>
+
+<script src="/js/team.js"></script>
 
 <%@ include file="../layout/footer.jsp"%>

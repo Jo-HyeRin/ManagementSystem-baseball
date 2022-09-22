@@ -26,12 +26,14 @@
 					<td>${stadium.stadiumName}</td>
 					<td>${stadium.openDate}</td>
 					<td>${stadium.stadiumTeam}</td>
-					<td><input type="checkbox" name="delete" value="true"></td>
+					<td><input id="deleteCheck" type="checkbox" name="delete" value="true"></td>
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
 
 </div>
+
+<script src="/js/stadium.js"></script>
 
 <%@ include file="../layout/footer.jsp"%>

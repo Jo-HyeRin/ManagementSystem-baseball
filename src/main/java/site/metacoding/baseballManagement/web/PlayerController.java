@@ -2,9 +2,14 @@ package site.metacoding.baseballManagement.web;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -21,6 +26,7 @@ public class PlayerController {
 	
 	private final PlayerService playerService;
 	private final PlayerDao playerDao;
+	private final HttpSession session;
 
 	@GetMapping("/playerList")
 	public String getPlayerList(Model model) {
@@ -40,6 +46,17 @@ public class PlayerController {
 		return new CMRespDto<>(1, "선수 등록 성공", null);
 	}
 	
+	@DeleteMapping("/player/{id}")
+	public @ResponseBody CMRespDto<?> deletePlayer(@PathVariable Integer id, HttpServletResponse response) {
+		playerService.deletePlayer(id);
+		session.invalidate();
+		return new CMRespDto<>(1, "선수 삭제 성공", null);
+	}
+	
+	@GetMapping("/listByPosition")
+	public String listByPosition() {
+		return "player/listByPosition";
+	}
 	
 	
 	
