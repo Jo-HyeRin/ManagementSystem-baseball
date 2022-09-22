@@ -5,18 +5,13 @@
 <mapper namespace="site.metacoding.baseballManagement.domain.team.TeamDao">
 
 	<insert id="insert">
-		INSERT INTO team(teamName, makeTeamDate)
-		VALUES(#{teamName}, #{makeTeamDate})
+		INSERT INTO team(teamName, makeTeamDate, teamStadium)
+		VALUES(#{teamName}, #{makeTeamDate}, #{teamStadium})
 	</insert>
 
 	<select id="findAll"
 		resultType="site.metacoding.baseballManagement.domain.team.Team">
-		SELECT * FROM team ORDER BY id DESC
-	</select>
-
-	<select id="findById"
-		resultType="site.metacoding.baseballManagement.domain.team.Team">
-		SELECT * FROM team WHERE id = #{id}
+		SELECT * FROM team
 	</select>
 
 	<insert id="deleteById">
