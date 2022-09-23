@@ -1,17 +1,21 @@
 package site.metacoding.baseballManagement.domain.banplayer;
 
-import java.sql.Timestamp;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-public class BanPlayer {
-	private Integer id;
-	private String teamName;
-	private String position;
-	private String playerName;
+@NoArgsConstructor
+@Setter
+@Getter
+public class Banplayer {
+	private Integer id;	
 	private String banReason;
-	private Timestamp banDate;
+	private String banDate;
+	private Integer playerId;
 	
-	public BanPlayer(String playerName, String banReason) {
-		this.playerName = playerName;
+	public Banplayer(String banReason, String banDate, Integer playerId) {
 		this.banReason = banReason;
+		this.banDate = banDate;
+		this.playerId = playerId;
 	}
 }

@@ -14,6 +14,7 @@
 		<thead>
 			<tr>
 				<th>번호</th>
+				<th>소속팀</th>
 				<th>선수이름</th>
 				<th>포지션</th>
 				<th>소속팀</th>
@@ -24,9 +25,9 @@
 			<c:forEach var="player" items="${playerList}">
 				<tr>
 					<td>${player.id}</td>
+					<td>소속팀</td>
 					<td>${player.playerName}</td>
 					<td>${player.position}</td>
-					<td>${player.playerTeam}</td>
 					<td><input id="deleteCheck" type="checkbox" name="delete" value="true"></td>
 				</tr>
 			</c:forEach>
@@ -34,7 +35,5 @@
 	</table>
 
 </div>
-
-<script src="/js/player.js"></script>
 
 <%@ include file="../layout/footer.jsp"%>

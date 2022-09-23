@@ -48,11 +48,12 @@ $("#btnInsert").click(() => {
 		}).done((res) => {
 			if (res.code == 1) {
 				alert("선수 등록 완료");
-				location.href = "/player/playerList";
+				location.href = "/playerList";
 			}else{
 				alert("등록 실패");
 			}
 		});
+		
 });
 
 </script>

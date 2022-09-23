@@ -2,7 +2,7 @@ package site.metacoding.baseballManagement.domain.banplayer;
 
 import java.util.List;
 
-public interface BanPlayerDao {
-	public void insert(BanPlayer Banplayer);
-	public List<BanPlayer> findAll();
+public interface BanplayerDao {
+	public void insert(Banplayer banplayer);
+	public List<Banplayer> findAll();
 }

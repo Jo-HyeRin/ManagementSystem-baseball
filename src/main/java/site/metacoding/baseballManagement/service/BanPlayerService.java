@@ -3,18 +3,18 @@ package site.metacoding.baseballManagement.service;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
-import site.metacoding.baseballManagement.domain.banplayer.BanPlayer;
-import site.metacoding.baseballManagement.domain.banplayer.BanPlayerDao;
-import site.metacoding.baseballManagement.web.dto.request.banplayer.InsertBanPlayerDto;
+import site.metacoding.baseballManagement.domain.banplayer.Banplayer;
+import site.metacoding.baseballManagement.domain.banplayer.BanplayerDao;
+import site.metacoding.baseballManagement.web.dto.request.banplayer.InsertBanplayerDto;
 
 @RequiredArgsConstructor
 @Service
-public class BanPlayerService {
+public class BanplayerService {
 
-	private final BanPlayerDao banPlayerDao;
+	private final BanplayerDao banplayerDao;
 	
-	public void insertBanPlayer(InsertBanPlayerDto insertBanPlayerDto) {
-		BanPlayer banplayer = insertBanPlayerDto.toEntity();
-		banPlayerDao.insert(banplayer);
+	public void insertBanplayer(InsertBanplayerDto insertBanplayerDto) {
+		Banplayer banplayer = insertBanplayerDto.toEntity();
+		banplayerDao.insert(banplayer);
 	}
 }

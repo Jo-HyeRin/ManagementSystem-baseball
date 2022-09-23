@@ -2,16 +2,17 @@ package site.metacoding.baseballManagement.web.dto.request.banplayer;
 
 import lombok.Getter;
 import lombok.Setter;
-import site.metacoding.baseballManagement.domain.banplayer.BanPlayer;
+import site.metacoding.baseballManagement.domain.banplayer.Banplayer;
 
 @Setter
 @Getter
-public class InsertBanPlayerDto {
-	private String playerName;
+public class InsertBanplayerDto {
 	private String banReason;
+	private String banDate;
+	private Integer playerId;
 	
-	public BanPlayer toEntity() {
-		BanPlayer banPlayer = new BanPlayer(this.playerName, this.banReason);
+	public Banplayer toEntity() {
+		Banplayer banPlayer = new Banplayer(this.banReason, this.banDate, this.playerId);
 		return banPlayer;
 	}
 }

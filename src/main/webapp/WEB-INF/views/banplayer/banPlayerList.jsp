@@ -11,7 +11,7 @@
 		<thead>
 			<tr>
 				<th>번호</th>
-				<th>팀이름</th>
+				<th>소속팀</th>
 				<th>포지션</th>
 				<th>선수이름</th>
 				<th>사유</th>
@@ -19,14 +19,14 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="banPlayer" items="${banPlayerList}">
+			<c:forEach var="banplayer" items="${banplayerList}">
 				<tr>
-					<td>${banPlayer.id}</td>
-					<td>${banPlayer.teamName}</td>
-					<td>${banPlayer.position}</td>
-					<td>${banPlayer.playerName}</td>
-					<td>${banPlayer.banReason}</td>
-					<td>${banPlayer.banDate}</td>
+					<td>${banplayer.id}</td>
+					<td>소속팀</td>
+					<td>포지션</td>
+					<td>선수이름</td>
+					<td>${banplayer.banReason}</td>
+					<td>${banplayer.banDate}</td>
 				</tr>
 			</c:forEach>
 		</tbody>
@@ -34,6 +34,6 @@
 
 </div>
 
-<script src="/js/banplayer.js"></script>
+<script></script>
 
 <%@ include file="../layout/footer.jsp"%>

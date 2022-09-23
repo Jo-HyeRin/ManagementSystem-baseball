@@ -3,28 +3,53 @@
 <%@ include file="../layout/header.jsp"%>
 
 <div class="container">
-	<br />
-	<br />
+	<br /> <br />
 	<h1 style="text-align: center;">퇴출선수등록</h1>
-	<br /> 
-	
-	<label for="team">퇴출선수이름:</label> 
-	<select id="team" name="team">
-		<c:forEach var="teamName" items="${teamList}">
-			<option value="${team.teamName}">${team.teamName}</option>
+	<br /> <input id="playerId" type="hidden" value="${player.id}"> <label for="player">퇴출선수이름:</label>
+	<select id="player" name="player">
+		<c:forEach var="player" items="${playerList}">
+			<option value="${player.playerName}">${player.playerName}</option>
 		</c:forEach>
-	</select>
+	</select> <br />
 
-	<br/>
+	<div class="mb-3 mt-3">
+		<input id="banReason" type="text" class="form-control" placeholder="Enter banReason"
+			maxlength="20">
+	</div>
+	<div class="mb-3 mt-3">
+		<input id="banDate" type="text" class="form-control" placeholder="Enter YYYY-MM-DD"
+			maxlength="20">
+	</div>
 
-		<div class="mb-3 mt-3">
-			<input id="banReason" type="text" class="form-control" placeholder="Enter banReason" maxlength="20">
-		</div>		
-		
-		<button id="btnInsert" type="button" class="btn btn-primary">퇴출선수등록하기</button>
+	<button id="btnInsert" type="button" class="btn btn-primary">퇴출선수등록하기</button>
 
 </div>
 
-<script src="/js/banplayer.js"></script>
+<script>
+$("#btnInsert").click(() => {
+	let data = {		
+			banReason: $("#banReason").val(),
+			banDate: $("#banDate").val(),
+			playerId: $("#playerId").val()
+		};
+
+		$.ajax("/banplayerSave", {
+			type: "POST",
+			dataType: "json",
+			data: JSON.stringify(data),
+			headers: {
+				"Content-Type": "application/json"
+			}
+		}).done((res) => {
+			if (res.code == 1) {
+				alert("퇴출 선수 등록 완료");
+				location.href = "/banplayerList";
+			}else{
+				alert("등록 실패");
+			}
+		});
+});
+
+</script>
 
 <%@ include file="../layout/footer.jsp"%>

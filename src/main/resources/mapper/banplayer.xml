@@ -2,21 +2,21 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="site.metacoding.baseballManagement.domain.banplayer.BanPlayerDao">
+<mapper namespace="site.metacoding.baseballManagement.domain.banplayer.BanplayerDao">
 
 	<insert id="insert">
-		INSERT INTO banPlayer(playerName, banReason, banDate)
-		VALUES(#{playerName}, #{banReason}, NOW())
+		INSERT INTO banPlayer(banReason, banDate, playerId)
+		VALUES(#{banReason}, #{banDate}, #{playerId})
 	</insert>
 
 	<select id="findAll"
-		resultType="site.metacoding.baseballManagement.domain.banplayer.BanPlayer">
+		resultType="site.metacoding.baseballManagement.domain.banplayer.Banplayer">
 		SELECT *
-		FROM BanPlayer	
+		FROM Banplayer	
 	</select>
 
 	<insert id="deleteById">
-		DELETE FROM banPlayer WHERE id = #{id}
+		DELETE FROM banplayer WHERE id = #{id}
 	</insert>
 
 </mapper>
