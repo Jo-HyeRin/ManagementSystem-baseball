@@ -15,17 +15,15 @@
 				<th>번호</th>
 				<th>야구장이름</th>
 				<th>개장일</th>
-				<th>팀이름</th>
 				<th>삭제</th>
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="stadium" items="${stadiumList}">
+			<c:forEach var="stadiumList" items="${stadiumList}">
 				<tr>
-					<td>${stadium.id}</td>
-					<td>${stadium.stadiumName}</td>
-					<td>${stadium.openDate}</td>
-					<td>${stadium.stadiumTeam}</td>
+					<td>${stadiumList.id}</td>
+					<td>${stadiumList.stadiumName}</td>
+					<td>${stadiumList.openDate}</td>
 					<td><input id="deleteCheck" type="checkbox" name="delete" value="true"></td>
 				</tr>
 			</c:forEach>

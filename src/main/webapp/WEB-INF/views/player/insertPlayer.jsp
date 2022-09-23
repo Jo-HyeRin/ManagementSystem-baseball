@@ -10,7 +10,7 @@
 	<label for="team">Choose a team:</label> 
 	<select id="team" name="team">
 		<c:forEach var="team" items="${teamList}">
-			<option value="${teamName}">${team.teamName}</option>
+			<option value="${team.teamName}">${team.teamName}</option>
 		</c:forEach>
 	</select>	
 	

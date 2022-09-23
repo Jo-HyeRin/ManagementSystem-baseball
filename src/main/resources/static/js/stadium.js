@@ -13,10 +13,10 @@ $("#btnDelete").click(() => {
 function insertStadium() {
 	let data = {
 		stadiumName: $("#stadiumName").val(),
-		stadiumTeam: $("#stadiumTeam").val()
+		openDate: $("#openDate").val()
 	};
 
-	$.ajax("/stardiumSaveForm", {
+	$.ajax("/stardiumSave", {
 		type: "POST",
 		dataType: "json",
 		data: JSON.stringify(data),
@@ -27,6 +27,8 @@ function insertStadium() {
 		if (res.code == 1) {
 			alert("경기장 등록 완료");
 			location.href = "/stadiumList";
+		}else{
+			alert("등록 실패");
 		}
 	});
 }

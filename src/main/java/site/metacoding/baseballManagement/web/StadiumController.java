@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import lombok.RequiredArgsConstructor;
@@ -35,13 +36,13 @@ public class StadiumController {
 		return "stadium/main";
 	}
 	
-	@GetMapping("/stardiumSaveForm")
+	@GetMapping("/stadiumSaveForm")
 	public String insertStadium() {
 		return "stadium/insertStadium";
 	}
 	
-	@PostMapping("/stardiumSaveForm")
-	public @ResponseBody CMRespDto<?> join(InsertStadiumDto insertStadiumDto) {
+	@PostMapping("/stadiumSave")
+	public @ResponseBody CMRespDto<?> stadiumSave(@RequestBody InsertStadiumDto insertStadiumDto) {
 		stadiumService.insertStadium(insertStadiumDto);
 		return new CMRespDto<>(1, "경기장 등록 성공", null);
 	}

@@ -11,11 +11,9 @@ public class Stadium {
 	private Integer id;
 	private String stadiumName;
 	private String openDate;
-	private String stadiumTeam;
 	
-	public Stadium (String stadiumName, String openDate, String stadiumTeam) {
+	public Stadium (String stadiumName, String openDate) {
 		this.stadiumName = stadiumName;
 		this.openDate = openDate;
-		this.stadiumTeam = stadiumTeam;
 	}
 }

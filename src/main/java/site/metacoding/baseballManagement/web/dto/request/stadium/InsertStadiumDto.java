@@ -9,10 +9,9 @@ import site.metacoding.baseballManagement.domain.stadium.Stadium;
 public class InsertStadiumDto {
 	private String stadiumName;
 	private String openDate;
-	private String stadiumTeam;
 	
 	public Stadium toEntity() {
-		Stadium stadium = new Stadium(this.stadiumName, this.openDate, this.stadiumTeam);
+		Stadium stadium = new Stadium(this.stadiumName, this.openDate);
 		return stadium;				
 	}
 

@@ -12,6 +12,7 @@
 		<thead>
 			<tr>
 				<th>포지션</th>
+				
 				<th>팀1</th>
 				<th>팀2</th>
 				<th>팀3</th>

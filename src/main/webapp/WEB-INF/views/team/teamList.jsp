@@ -14,7 +14,6 @@
 				<th>번호</th>
 				<th>팀이름</th>
 				<th>창단일</th>
-				<th>경기장</th>
 				<th>삭제</th>
 			</tr>
 		</thead>
@@ -23,8 +22,7 @@
 				<tr>
 					<td>${team.id}</td>
 					<td>${team.teamName}</td>
-					<td>${team.makeTeamDate}</td>
-					<td>${team.teamStadium}</td>
+					<td>${team.createDate}</td>
 					<td><input id="deleteCheck" type="checkbox" name="delete"></td>
 				</tr>
 			</c:forEach>
