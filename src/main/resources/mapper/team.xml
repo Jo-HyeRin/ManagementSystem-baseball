@@ -5,8 +5,8 @@
 <mapper namespace="site.metacoding.baseballManagement.domain.team.TeamDao">
 
 	<insert id="insert">
-		INSERT INTO team(teamName, createDate, stadiumId)
-		VALUES(#{teamName}, #{createDate}, #{stadiumId})
+		INSERT INTO team(teamName, createDate, stadiumName)
+		VALUES(#{teamName}, #{createDate}, #{stadiumName})
 	</insert>
 
 	<select id="findAll"

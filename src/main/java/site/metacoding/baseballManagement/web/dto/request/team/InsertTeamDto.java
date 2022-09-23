@@ -9,10 +9,10 @@ import site.metacoding.baseballManagement.domain.team.Team;
 public class InsertTeamDto {
 	private String teamName;
 	private String createDate;
-	private Integer stadiumId;
+	private String stadiumName;
 	
 	public Team toEntity() {
-		Team team = new Team(this.teamName, this.createDate, this.stadiumId);
+		Team team = new Team(this.teamName, this.createDate, this.stadiumName);
 		return team;
 	}
 }

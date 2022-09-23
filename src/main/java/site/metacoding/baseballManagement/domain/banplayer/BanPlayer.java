@@ -11,11 +11,11 @@ public class Banplayer {
 	private Integer id;	
 	private String banReason;
 	private String banDate;
-	private Integer playerId;
+	private String playerName;
 	
-	public Banplayer(String banReason, String banDate, Integer playerId) {
+	public Banplayer(String banReason, String banDate, String playerName) {
 		this.banReason = banReason;
 		this.banDate = banDate;
-		this.playerId = playerId;
+		this.playerName = playerName;
 	}
 }

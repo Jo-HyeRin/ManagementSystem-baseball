@@ -47,7 +47,7 @@ public class StadiumController {
 		return new CMRespDto<>(1, "경기장 등록 성공", null);
 	}
 	
-	@DeleteMapping("/stadium/{id}")
+	@DeleteMapping("/deleteStadium")
 	public @ResponseBody CMRespDto<?> deleteStadium(@PathVariable Integer id, HttpServletResponse response) {
 		stadiumService.deleteStadium(id);
 		session.invalidate();

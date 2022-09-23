@@ -2,8 +2,6 @@
 
 <%@ include file="../layout/header.jsp"%>
 
-<input id="stadiumId" type="hidden" value="${stadium.id}">
-
 <div class="container">
 	<br /><br/>
 	<h1 style="text-align: center;">팀등록</h1>	
@@ -12,7 +10,7 @@
 	<label for="stadium">Choose a stadium:</label> 
 	<select id="stadium" name="stadium">
 		<c:forEach var="stadium" items="${stadiumList}">
-			<option value="${stadium.stadiumName}">${stadium.stadiumName}</option>
+			<option id="stadiumName" value="${stadium.stadiumName}">${stadium.stadiumName}</option>
 		</c:forEach>
 	</select>	
 	
@@ -35,7 +33,7 @@ $("#btnInsert").click(() => {
 	let data = {
 			teamName: $("#teamName").val(),
 			createDate: $("#createDate").val(),
-			stadiumId: $("#stadiumId").val()
+			stadiumName: $("#stadiumName").val()
 		};
 
 		$.ajax("/teamSave", {

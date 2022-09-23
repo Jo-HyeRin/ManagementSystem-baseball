@@ -11,11 +11,11 @@ public class Team {
 	private Integer id;
 	private String teamName;
 	private String createDate;
-	private Integer stadiumId;
+	private String stadiumName;
 	
-	public Team (String teamName, String createDate, Integer stadiumId) {
+	public Team (String teamName, String createDate, String stadiumName) {
 		this.teamName = teamName;
 		this.createDate = createDate;
-		this.stadiumId = stadiumId;
+		this.stadiumName = stadiumName;
 	}
 }

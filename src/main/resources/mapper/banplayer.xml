@@ -5,8 +5,8 @@
 <mapper namespace="site.metacoding.baseballManagement.domain.banplayer.BanplayerDao">
 
 	<insert id="insert">
-		INSERT INTO banPlayer(banReason, banDate, playerId)
-		VALUES(#{banReason}, #{banDate}, #{playerId})
+		INSERT INTO banPlayer(banReason, banDate, playerName)
+		VALUES(#{banReason}, #{banDate}, #{playerName})
 	</insert>
 
 	<select id="findAll"
@@ -14,9 +14,9 @@
 		SELECT *
 		FROM Banplayer	
 	</select>
-
+	
 	<insert id="deleteById">
 		DELETE FROM banplayer WHERE id = #{id}
 	</insert>
-
+	
 </mapper>

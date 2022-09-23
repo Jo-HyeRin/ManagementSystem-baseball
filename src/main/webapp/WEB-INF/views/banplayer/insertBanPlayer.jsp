@@ -5,10 +5,11 @@
 <div class="container">
 	<br /> <br />
 	<h1 style="text-align: center;">퇴출선수등록</h1>
-	<br /> <input id="playerId" type="hidden" value="${player.id}"> <label for="player">퇴출선수이름:</label>
+	<br /> 
+	<label for="player">퇴출선수이름:</label>
 	<select id="player" name="player">
 		<c:forEach var="player" items="${playerList}">
-			<option value="${player.playerName}">${player.playerName}</option>
+			<option id="playerName" value="${player.playerName}">${player.playerName}</option>
 		</c:forEach>
 	</select> <br />
 
@@ -30,7 +31,7 @@ $("#btnInsert").click(() => {
 	let data = {		
 			banReason: $("#banReason").val(),
 			banDate: $("#banDate").val(),
-			playerId: $("#playerId").val()
+			playerName: $("#playerName").val()
 		};
 
 		$.ajax("/banplayerSave", {

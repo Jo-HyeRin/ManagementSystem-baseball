@@ -10,10 +10,9 @@
 	<label for="team">Choose a team:</label> 
 	<select id="team" name="team">
 		<c:forEach var="team" items="${teamList}">
-			<option value="${team.teamName}">${team.teamName}</option>
+			<option id="teamName" value="${team.teamName}">${team.teamName}</option>
 		</c:forEach>
 	</select>	
-	<input id="teamId" type="hidden" value="${team.id}">
 	<form>
 		<div class="mb-3 mt-3">
 			<input id="playerName" type="text" class="form-control" placeholder="Enter playerName" maxlength="20">
@@ -35,7 +34,7 @@ $("#btnInsert").click(() => {
 			playerName: $("#playerName").val(),
 			position: $("#position").val(),
 			insertDate: $("#insertDate").val(),
-			teamId: $("#teamId").val()
+			teamName: $("#teamName").val()
 		};
 
 		$.ajax("/playerSave", {

@@ -9,10 +9,10 @@ import site.metacoding.baseballManagement.domain.banplayer.Banplayer;
 public class InsertBanplayerDto {
 	private String banReason;
 	private String banDate;
-	private Integer playerId;
+	private String playerName;
 	
 	public Banplayer toEntity() {
-		Banplayer banPlayer = new Banplayer(this.banReason, this.banDate, this.playerId);
+		Banplayer banPlayer = new Banplayer(this.banReason, this.banDate, this.playerName);
 		return banPlayer;
 	}
 }

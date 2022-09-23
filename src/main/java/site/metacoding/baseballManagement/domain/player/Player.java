@@ -12,12 +12,12 @@ public class Player {
 	private String playerName;
 	private String position;
 	private String insertDate;
-	private Integer teamId;
+	private String teamName;
 	
-	public Player(String playerName, String position, String insertDate, Integer teamId) {
+	public Player(String playerName, String position, String insertDate, String teamName) {
 		this.playerName = playerName;
 		this.position = position;
 		this.insertDate = insertDate;
-		this.teamId = teamId;
+		this.teamName = teamName;
 	}
 }

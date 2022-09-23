@@ -23,7 +23,10 @@
 					<td>${teamList.id}</td>
 					<td>${teamList.teamName}</td>
 					<td>${teamList.createDate}</td>
-					<td><input id="deleteCheck" type="checkbox" name="delete"></td>
+					<td>
+					<input id="deleteCheck" type="checkbox" name="delete">
+					<button onclick=deleteTeam(${team.id}) class="btn btn-danger" value="${team.id}">삭제</button>
+					</td>
 				</tr>
 			</c:forEach>
 		</tbody>
@@ -31,6 +34,21 @@
 
 </div>
 
-<script src="/js/team.js"></script>
+<script>
+function deleteTeam(id){
+	
+	$.ajax("/team/"+id,{
+		type:"DELETE",
+		dataType:"json",
+	}).done((res)=>{
+		if(res.code == 1){
+			alert(res.msg);
+			location.href="/teamList";
+		}else{
+			alert("삭제 실패");
+		}
+	});
+}
+</script>
 
 <%@ include file="../layout/footer.jsp"%>
