@@ -10,12 +10,12 @@ import lombok.Setter;
 public class Team {
 	private Integer id;
 	private String teamName;
-	private String makeTeamDate;
-	private String teamStadium;
+	private String createDate;
+	private Integer stadiumId;
 	
-	public Team (String teamName, String makeTeamDate, String teamStadium) {
+	public Team (String teamName, String createDate, Integer stadiumId) {
 		this.teamName = teamName;
-		this.makeTeamDate = makeTeamDate;
-		this.teamStadium = teamStadium;
+		this.createDate = createDate;
+		this.stadiumId = stadiumId;
 	}
 }

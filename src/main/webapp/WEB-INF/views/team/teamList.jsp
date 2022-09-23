@@ -18,11 +18,11 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="team" items="${teamList}">
+			<c:forEach var="teamList" items="${teamList}">
 				<tr>
-					<td>${team.id}</td>
-					<td>${team.teamName}</td>
-					<td>${team.createDate}</td>
+					<td>${teamList.id}</td>
+					<td>${teamList.teamName}</td>
+					<td>${teamList.createDate}</td>
 					<td><input id="deleteCheck" type="checkbox" name="delete"></td>
 				</tr>
 			</c:forEach>

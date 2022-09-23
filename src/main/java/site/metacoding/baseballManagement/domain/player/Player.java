@@ -11,11 +11,13 @@ public class Player {
 	private Integer id;
 	private String playerName;
 	private String position;
-	private String playerTeam;
+	private String insertDate;
+	private Integer teamId;
 	
-	public Player(String playerName, String position, String playerTeam) {
+	public Player(String playerName, String position, String insertDate, Integer teamId) {
 		this.playerName = playerName;
 		this.position = position;
-		this.playerTeam = playerTeam;
+		this.insertDate = insertDate;
+		this.teamId = teamId;
 	}
 }

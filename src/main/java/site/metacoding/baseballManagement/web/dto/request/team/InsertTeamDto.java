@@ -8,11 +8,11 @@ import site.metacoding.baseballManagement.domain.team.Team;
 @Getter
 public class InsertTeamDto {
 	private String teamName;
-	private String makeTeamDate;
-	private String teamStadium;
+	private String createDate;
+	private Integer stadiumId;
 	
 	public Team toEntity() {
-		Team team = new Team(this.teamName, this.makeTeamDate, this.teamStadium);
+		Team team = new Team(this.teamName, this.createDate, this.stadiumId);
 		return team;
 	}
 }

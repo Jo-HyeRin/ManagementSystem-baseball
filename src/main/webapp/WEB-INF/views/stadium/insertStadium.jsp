@@ -39,9 +39,7 @@ $("#btnInsert").click(() => {
 				alert("경기장 등록 완료");
 				location.href = "/stadiumList";
 			}
-		});
-
-	
+		});	
 });
 </script>
 
