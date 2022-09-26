@@ -16,6 +16,8 @@ public class BanplayerService {
 	public void insertBanplayer(InsertBanplayerDto insertBanplayerDto) {
 		Banplayer banplayer = insertBanplayerDto.toEntity();
 		banplayerDao.insert(banplayer);
-		// 기존 player 퇴출 여부 업데이트 필요
+		
+		// 기존 player 에서 삭제
+		
 	}
 }

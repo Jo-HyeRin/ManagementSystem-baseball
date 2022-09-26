@@ -7,9 +7,9 @@
 	<h1 style="text-align: center;">퇴출선수등록</h1>
 	<br /> 
 	<label for="player">퇴출선수이름:</label>
-	<select id="playerName" name="player">
-		<c:forEach var="player" items="${playerList}">
-			<option value="${player.playerName}">${player.playerName}</option>
+	<select id="playerName" name="playerName">
+		<c:forEach var="playerList" items="${playerList}">
+			<option value="${playerList.playerName}">${playerList.playerName}</option>
 		</c:forEach>
 	</select> <br />
 
@@ -47,6 +47,7 @@ $("#btnInsert").click(() => {
 				location.href = "/banplayerList";
 			}else{
 				alert("등록 실패");
+				return;
 			}
 		});
 });

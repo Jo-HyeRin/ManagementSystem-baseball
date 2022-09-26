@@ -11,25 +11,24 @@
 	<table class="table table-striped">
 		<thead>
 			<tr>
-				<th>포지션</th>
-				
-				<th>팀1</th>
-				<th>팀2</th>
-				<th>팀3</th>
+				<th>포지션</th>				
+				<th>서울팀</th>
+				<th>창원팀</th>
+				<th>부산팀</th>
 			</tr>
 		</thead>
 		<tbody>
-			<tr>
-				<td>포지션이름</td>
-				<td>선수이름</td>
-				<td>선수이름</td>
-				<td>선수이름</td>				
-			</tr>
+			<c:forEach var="player" items="${playerlist}">
+				<tr>
+					<td>${player.position}</td>
+					<td>${player.team1}</td>
+					<td>${player.team2}</td>
+					<td>${player.team3}</td>
+				</tr>
+			</c:forEach>
 		</tbody>
 	</table>
 
 </div>
-
-<script src="/js/player.js"></script>
 
 <%@ include file="../layout/footer.jsp"%>
