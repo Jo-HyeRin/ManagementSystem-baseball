@@ -7,9 +7,9 @@
 	<h1 style="text-align: center;">퇴출선수등록</h1>
 	<br /> 
 	<label for="player">퇴출선수이름:</label>
-	<select id="player" name="player">
+	<select id="playerName" name="player">
 		<c:forEach var="player" items="${playerList}">
-			<option id="playerName" value="${player.playerName}">${player.playerName}</option>
+			<option value="${player.playerName}">${player.playerName}</option>
 		</c:forEach>
 	</select> <br />
 

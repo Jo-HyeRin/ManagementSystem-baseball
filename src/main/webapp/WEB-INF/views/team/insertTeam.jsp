@@ -8,9 +8,9 @@
 	<br />
 
 	<label for="stadium">Choose a stadium:</label> 
-	<select id="stadium" name="stadium">
+	<select id="stadiumName" name="stadium">
 		<c:forEach var="stadium" items="${stadiumList}">
-			<option id="stadiumName" value="${stadium.stadiumName}">${stadium.stadiumName}</option>
+			<option value="${stadium.stadiumName}">${stadium.stadiumName}</option>
 		</c:forEach>
 	</select>	
 	

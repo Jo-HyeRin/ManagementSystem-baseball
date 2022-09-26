@@ -27,7 +27,7 @@
 					<td>${stadiumList.openDate}</td>
 					<td>
 					<input id="deleteCheck" type="checkbox" name="delete" value="true">
-					<button onclick=deleteStadium(${stadium.id}) class="btn btn-danger" value="${stadium.id}">삭제</button>
+					<button onclick=deleteStadium(${stadiumList.id}) class="btn btn-danger" value="${stadiumList.id}">삭제</button>
 					</td>
 				</tr>
 			</c:forEach>
@@ -48,10 +48,15 @@ function deleteStadium(id){
 			location.href="/stadiumList";
 		}else{
 			alert("삭제 실패");
+			return;
 		}
 	});
 }
 
 </script>
+
+
+
+
 
 <%@ include file="../layout/footer.jsp"%>

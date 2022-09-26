@@ -53,10 +53,14 @@ function deletePlayer(id){
 			location.href="/playerList";
 		}else{
 			alert("삭제 실패");
+			return;
 		}
 	});
 }
 
 </script>
+
+
+
 
 <%@ include file="../layout/footer.jsp"%>

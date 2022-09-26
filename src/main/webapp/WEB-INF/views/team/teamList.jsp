@@ -25,7 +25,7 @@
 					<td>${teamList.createDate}</td>
 					<td>
 					<input id="deleteCheck" type="checkbox" name="delete">
-					<button onclick=deleteTeam(${team.id}) class="btn btn-danger" value="${team.id}">삭제</button>
+					<button onclick=deleteTeam(${teamList.id}) class="btn btn-danger" value="${teamList.id}">삭제</button>
 					</td>
 				</tr>
 			</c:forEach>
@@ -46,6 +46,7 @@ function deleteTeam(id){
 			location.href="/teamList";
 		}else{
 			alert("삭제 실패");
+			return;
 		}
 	});
 }
